@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="app_name">Mobile Printer for Centennial</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_wifiprinter">Mobile Printer for Centennial</string>
+    <string name="wifiprintguidence">Guidance for Mobile Printer</string>
+    <string name="installtips">You have not installed Mobile Centennial; it is needed to update printer list in Centennial. Do you want to install it now? </string>
+    <string name="configerror">Selected print failed may be caused by system update in college. Do you want to check the lastest configuration right now? </string>
+    <string name="configsuccess">Configuration was updateded successfully, please try it again.</string>
+    <string name="configfailed">You already installed the last version of configuration, you can try another printer or contact with gujg2010@gmail.com</string>
+
+    <string name="connecterror">Failed to connect Webprint, make sure you have connected Wi-Fi in College</string>
+    <string name="balanceerror">You have not enough balance.</string>
+    <string name="updateconfirm">New version has been detected; do you want to update it now.</string>
+    
+    
+    <string name="doc2pdf1">0:Converting Format</string>
+	<string name="doc2pdf2">1:Connecting to server</string>
+	<string name="doc2pdf3">1:Converting Complete</string>
+	<string name="doc2pdf4">1:Converting Error</string>
+	
+	<string name="print1">0:Logging to Webprinter...</string>
+	<string name="print2">1:Network error, Checking your connection then try again</string>
+	<string name="print3">1:Format error Update please</string>
+	<string name="print4">1:Converting Error</string>
+	<string name="print5">1:Logging to Webprinter...</string>
+	<string name="print11">1:Invalid username or password webprinter needs the account of desktop system in College</string>
+
+	
+	
+	<string name="print6">1:Format error, Update software please</string>
+	<string name="print7">1:Can not find print on webprinter list, please select another one and try again</string>
+	<string name="print8">1:Uploading Data...</string>
+	<string name="print9">1:Checking Status...</string>
+	<string name="print10">1:Can not find Status Check URL, Update software please</string>
+</resources>

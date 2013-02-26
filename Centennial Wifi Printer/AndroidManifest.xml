@@ -1,0 +1,126 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="my.mailart.centennial.wifi.printer"
+    android:versionCode="23"
+    android:versionName="1.03" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.PERMISSION_NAME" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> 
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+	
+    <application
+        android:icon="@drawable/mp"
+        android:label="@string/app_name"
+        android:windowSoftInputMode="stateHidden"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Wifiprinter"
+            android:screenOrientation="portrait"
+            android:label="@string/wifiprintguidence" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".Webprinter"
+            android:icon="@drawable/ic_launcher"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_wifiprinter" >
+            <intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file" />
+				<data android:mimeType="*/*" />
+				<data android:host="*" />
+				<data android:pathPattern=".*\\.pdf" />
+			</intent-filter>
+	
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="content" />
+                <data android:scheme="file" />
+                <data android:host="*" />
+
+				<data android:pathPattern=".*\\.xlam" />
+             	<data android:pathPattern=".*\\.xls" />
+                <data android:pathPattern=".*\\.xlsb" />
+                <data android:pathPattern=".*\\.xlsm" />
+                <data android:pathPattern=".*\\.xlsx" />
+             	<data android:pathPattern=".*\\.xltm" />
+                <data android:pathPattern=".*\\.tltx" />         
+                
+                <data android:pathPattern=".*\\.pot" />
+                <data android:pathPattern=".*\\.potm" />
+             	<data android:pathPattern=".*\\.potx" />
+                <data android:pathPattern=".*\\.ppam" />
+                <data android:pathPattern=".*\\.pps" />
+				<data android:pathPattern=".*\\.ppsm" />
+                <data android:pathPattern=".*\\.ppsx" />
+                <data android:pathPattern=".*\\.ppt" />
+             	<data android:pathPattern=".*\\.pptm" />
+                <data android:pathPattern=".*\\.pptx" />
+                              
+             	<data android:pathPattern=".*\\.doc" />
+             	<data android:pathPattern=".*\\.docm" />
+                <data android:pathPattern=".*\\.docx" />
+                <data android:pathPattern=".*\\.dot" />
+                <data android:pathPattern=".*\\.dotm" />
+                <data android:pathPattern=".*\\.dotx" />
+               
+                <data android:pathPattern=".*\\.txt" />
+                <data android:pathPattern=".*\\.pdf" />
+			</intent-filter>
+
+			<intent-filter>  
+				<action android:name="android.intent.action.VIEW" />  
+				<category android:name="android.intent.category.DEFAULT" />  
+				<category android:name="android.intent.category.BROWSABLE" />  
+				<data android:mimeType="text/plain" />
+                <data android:mimeType="application/msword" />
+                <data android:mimeType="application/ms-word" />
+                <data android:mimeType="application/vnd.ms-word" />
+                <data android:mimeType="application/vnd.ms-works" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.template" />
+                <data android:mimeType="application/pdf" />
+                
+                
+                <data android:mimeType="application/vnd.ms-powerpoint.template.macroEnabled.12" />
+                <data android:mimeType="application/vnd.ms-powerpoint.slideshow.macroEnabled.12" />
+   				<data android:mimeType="application/vnd.ms-powerpoint.presentation.macroEnabled.12" />
+                <data android:mimeType="application/vnd.ms-powerpoint.addin.macroEnabled.12" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.slideshow" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.template" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.presentationml.presentation" />
+                <data android:mimeType="application/vnd.ms-powerpoint" />
+                <data android:mimeType="application/vnd.ms-excel.sheet.binary.macroEnabled.12" />
+                <data android:mimeType="application/vnd.ms-excel.addin.macroEnabled.12" />
+                <data android:mimeType="application/vnd.ms-excel.template.macroEnabled.12" />
+                <data android:mimeType="application/vnd.ms-excel.sheet.macroEnabled.12" />
+   				<data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.template" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                <data android:mimeType="application/vnd.ms-excel" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                <data android:mimeType="application/vnd.ms-word.template.macroEnabled.12" />
+                <data android:mimeType="application/vnd.ms-word.document.macroEnabled.12" />
+			</intent-filter>   
+        </activity>
+        
+        <activity android:name="com.google.ads.AdActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+    </application>
+
+</manifest>
